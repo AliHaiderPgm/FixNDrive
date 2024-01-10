@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.vl {
+	//vertical line
+	background-color: #c2c2c2;
+	width: 1px;
+	height: 48px;
+}
