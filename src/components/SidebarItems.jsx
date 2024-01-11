@@ -6,16 +6,12 @@ export const items = [
   {
     key: "dashboard",
     icon: <LaptopOutlined />,
-    label: (
-      <Link to={'/'} className="no-underline">
-        Dashboard
-      </Link>
-    ),
+    label: <p>Dashboard</p>,
     children: [
       {
         key: "analytics",
         label: (
-          <Link to={'/'} className="no-underline">
+          <Link to={'/analytics'} className="no-underline">
             Analytics
           </Link>
         ),
