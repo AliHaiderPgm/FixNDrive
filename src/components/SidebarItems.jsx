@@ -19,7 +19,7 @@ export const items = [
       {
         key: "sellerProfiles",
         label: (
-          <Link to={'/'} className="no-underline">
+          <Link to={'/seller'} className="no-underline">
             Seller Profiles
           </Link>
         ),
@@ -27,7 +27,7 @@ export const items = [
       {
         key: "userProfiles",
         label: (
-          <Link to={'/'} className="no-underline">
+          <Link to={'/user'} className="no-underline">
             User Profiles
           </Link>
         ),

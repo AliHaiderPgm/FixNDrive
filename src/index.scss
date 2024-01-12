@@ -8,3 +8,57 @@
 	width: 1px;
 	height: 48px;
 }
+
+.thinScrollBar {
+	// ::-webkit-scrollbar {
+	// 	width: 2em;
+	// 	height: 2em;
+	// }
+	// ::-webkit-scrollbar-button {
+	// 	background: #ccc;
+	// }
+	// ::-webkit-scrollbar-track-piece {
+	// 	background: #888;
+	// }
+	// ::-webkit-scrollbar-thumb {
+	// 	background: #eee;
+	// }
+}
+.customSwitch {
+	.ant-switch-handle {
+		width: 40px !important;
+		height: 40px !important;
+		top: 13% !important;
+		inset-inline-start: 4px;
+		&::before {
+			border-radius: 50%;
+		}
+	}
+	.ant-switch {
+		background: rgba(0, 0, 0, 0.45);
+		&:hover {
+			background: rgba(0, 0, 0, 0.35);
+		}
+		&::before {
+			content: "Disable";
+			position: absolute;
+			top: -40%;
+			left: 0;
+		}
+		&::after {
+			content: "Enable";
+			position: absolute;
+			top: -40%;
+			right: 0;
+		}
+	}
+	.ant-switch.ant-switch-checked {
+		background: #a41f1f;
+		&:hover {
+			background: #a41f1fbe;
+		}
+		.ant-switch-handle {
+			inset-inline-start: calc(100% - 44px);
+		}
+	}
+}

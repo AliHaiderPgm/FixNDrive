@@ -5,12 +5,29 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <title>FixNDrive</title>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=marker&v=beta"
+    defer>
+    </script>
+  <script>
+    function initMap() {
+      // console.log("Maps JavaScript API loaded.");
+      // const advancedMarkers = document.querySelector("gmp-advanced-marker");
+      // advancedMarkers.addEventListener('gmp-click', () => {
+      //   console.log("hello")
+      // })
+
+    }
+
+    window.initMap = initMap;
+  </script>
 </body>
 
 </html>

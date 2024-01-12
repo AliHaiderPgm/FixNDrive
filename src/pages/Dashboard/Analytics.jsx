@@ -73,13 +73,13 @@ const Analytics = () => {
             <div className="grid grid-cols-3 gap-4 mt-4">
 
                 <div className="col-span-2 grid grid-cols-4 gap-4 bg-white p-4 rounded shadow-md">
-                    <div className="h-60 bg-gray-50 rounded">
+                    <div className=" bg-gray-50 rounded">
                         <img src={Logo} alt="FixNDrive" className="max-w-full object-contain h-full" />
                     </div>
-                    <div className="col-span-3">
-                        <p className="text-2xl uppercase mb-1">FixNDrive</p>
-                        <p>FixNDrive offers complete auto care for your vehicle. Whether it’s time for your next factory recommended maintenance visit, a routine oil change, new tires, or repair services</p>
-                        <p className="text-xl font-bold my-4">Average Rate 2023</p>
+                    <div className="col-span-3 flex flex-col gap-4">
+                        <p className="text-4xl font-semibold uppercase mb-1">FixNDrive</p>
+                        <p className="text-lg">FixNDrive offers complete auto care for your vehicle. Whether it’s time for your next factory recommended maintenance visit, a routine oil change, new tires, or repair services</p>
+                        <p className="text-xl font-bold leading-6">Average Rate 2023</p>
                         <div className="grid grid-cols-3 gap-4">
                             <div className="flex gap-2">
                                 <div>
