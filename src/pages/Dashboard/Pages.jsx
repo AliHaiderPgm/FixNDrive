@@ -5,6 +5,7 @@ import Home from './Home'
 import Analytics from './Analytics'
 import SellerProfiles from './SellerProfiles'
 import UserProfiles from './UserProfiles'
+import Services from './Services'
 const Pages = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const Pages = () => {
                 <Route path='analytics' element={<Analytics />} />
                 <Route path='seller' element={<SellerProfiles />} />
                 <Route path='user' element={<UserProfiles />} />
+                <Route path='services' element={<Services />} />
                 <Route path='orders' element={<Orders />} />
             </Routes>
         </>

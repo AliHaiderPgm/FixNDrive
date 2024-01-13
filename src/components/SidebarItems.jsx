@@ -38,7 +38,7 @@ export const items = [
     key: "services",
     icon: <CustomerServiceOutlined />,
     label: (
-      <Link to={'/'} className="no-underline">
+      <Link to={'/services'} className="no-underline">
         Services
       </Link>
     ),

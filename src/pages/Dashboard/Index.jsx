@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import logo from '../../assets/car.png'
 
 
-const { Header, Sider } = Layout;
+const { Sider } = Layout;
 
 export default function Index() {
 
