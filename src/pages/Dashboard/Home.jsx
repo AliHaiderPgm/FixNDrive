@@ -130,7 +130,7 @@ const Home = () => {
                     <Table columns={columns} dataSource={data} scroll={{ y: 500 }} loading={false} pagination={{ position: ['bottomCenter'] }} />
                 </div>
             </div>
-            <Modal t
+            <Modal
                 title="Add User"
                 open={isModalOpen}
                 width={750}

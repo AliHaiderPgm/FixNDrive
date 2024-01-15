@@ -47,7 +47,7 @@ export const items = [
     key: "orders",
     icon: <ShopOutlined />,
     label: (
-      <Link to={'/'} className="no-underline">
+      <Link to={'/orders'} className="no-underline">
         Orders
       </Link>
     ),
