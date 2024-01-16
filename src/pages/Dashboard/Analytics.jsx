@@ -4,6 +4,7 @@ import shape from "../../assets/shape.svg"
 import { FundOutlined, RiseOutlined, ShopOutlined, ShoppingOutlined, UserOutlined } from "@ant-design/icons"
 import Chart from "react-apexcharts";
 import { Button } from "antd";
+import Sample_2 from "../../components/banners/Sample_2";
 
 const Analytics = () => {
     const data = {
@@ -115,15 +116,7 @@ const Analytics = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-10 bg-gradient-to-tr from-gray-50 to-blue-200 rounded-md shadow-md p-4">
-                    <div className="col-span-7">
-                        <img src={shape} alt="" className="max-w-full h-auto" />
-                    </div>
-                    <div className="col-span-3 self-center">
-                        <p className="text-4xl font-bold">$476.3k</p>
-                        <p className="-ml-4">Total Balance</p>
-                    </div>
-                </div>
+                <Sample_2 />
 
             </div>
 

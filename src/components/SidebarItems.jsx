@@ -62,11 +62,11 @@ export const items = [
     ),
   },
   {
-    key: "reviews",
+    key: "bannersAndOffers",
     icon: <FileSearchOutlined />,
     label: (
-      <Link to={'/'} className="no-underline">
-        Reviews
+      <Link to={'/banners'} className="no-underline">
+        Banners & Offers
       </Link>
     ),
   },
