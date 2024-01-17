@@ -7,6 +7,7 @@ import SellerProfiles from './SellerProfiles'
 import UserProfiles from './UserProfiles'
 import Services from './Services'
 import Banners from './Banners'
+import Settings from './Settings'
 const Pages = () => {
     return (
         <>
@@ -18,6 +19,7 @@ const Pages = () => {
                 <Route path='services' element={<Services />} />
                 <Route path='orders' element={<Orders />} />
                 <Route path='banners' element={<Banners />} />
+                <Route path='settings' element={<Settings />} />
             </Routes>
         </>
     )

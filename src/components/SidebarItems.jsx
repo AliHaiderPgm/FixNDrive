@@ -92,7 +92,7 @@ export const items = [
     key: "setting",
     icon: <SettingOutlined />,
     label: (
-      <Link to={"/"} className='no-underline'>
+      <Link to={"/settings"} className='no-underline'>
         Settings
       </Link>
     )
