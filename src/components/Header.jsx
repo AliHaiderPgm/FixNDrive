@@ -163,18 +163,15 @@ const Header = ({ title }) => {
         backgroundColor: token.colorBgElevated,
         borderRadius: token.borderRadiusLG,
         boxShadow: token.boxShadowSecondary,
-    };
-    const menuStyle = {
-        boxShadow: 'none',
-    };
+    }
     return (
         <>
             <div className="shadow-sm">
-                <Row gutter={18} className="justify-between">
-                    <Col span={18}>
+                <div className="grid gap-4 grid-cols-1 sm:grid-cols-12">
+                    <div className="col-span-1 sm:col-span-6 md:col-span-8">
                         <Input placeholder="Search for..." size="large" />
-                    </Col>
-                    <Col span={4} className="flex gap-4">
+                    </div>
+                    <div className="col-span-1 sm:col-span-6 md:col-span-4 flex gap-2 justify-end">
                         <div>
                             <Avatar size="large" className="cursor-pointer hover:shadow-md" src="https://flagsapi.com/PK/flat/64.png" />
                         </div>
@@ -271,13 +268,13 @@ const Header = ({ title }) => {
                         <div>
                             <Avatar size="large" className="cursor-pointer shadow-md bg-white" src="https://api.dicebear.com/7.x/miniavs/svg?seed=69" />
                         </div>
-                    </Col>
-                </Row>
-                <div className="flex justify-between items-center bg-white px-4 py-2 mt-3 rounded">
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row gap-2 justify-between items-center bg-white px-4 py-2 mt-3 rounded">
                     <h1 className="text-4xl">{title}</h1>
-                    <div className="flex items-center gap-8">
+                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-8">
                         <p>Data refreshed</p>
-                        <p className="px-12 py-4 bg-gray-100 rounded">{new Date().toUTCString()}</p>
+                        <p className="px-3 md:px-12 py-2 md:py-4 bg-gray-100 rounded">{new Date().toUTCString()}</p>
                     </div>
                 </div>
             </div>
