@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { Layout, Menu } from "antd"
+import { Button, Layout, Menu } from "antd"
 import { items } from "../../components/SidebarItems"
 import Pages from "./Pages"
 import { Link } from "react-router-dom"
 import logo from '../../assets/car.png'
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons"
 
 
 const { Sider } = Layout;
@@ -17,8 +18,8 @@ export default function Index() {
         <Layout hasSider>
             <Sider
                 breakpoint="lg"
-                width={220}
-                className="!sticky top-0 max-h-[calc(100dvh-40px)] z-[1001]"
+                width={200}
+                className={["!sticky top-0 max-h-[calc(100dvh-40px)] z-[100] shadow-md",]}
                 collapsible
                 collapsed={collapsed}
                 onCollapse={value => setCollapsed(value)}
@@ -38,7 +39,7 @@ export default function Index() {
                 />
             </Sider>
 
-            <Layout className="p-4">
+            <Layout className="p-3">
                 <Pages />
                 <footer className="mt-3">
                     <p className="mb-0 text-center">&copy; {year}. All Rights Reserved.</p>

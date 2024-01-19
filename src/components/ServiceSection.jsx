@@ -9,7 +9,7 @@ const ServiceSection = ({ title, icon, iconColor, data }) => {
                 </span>
                 <span className="text-xl font-bold">{title}</span>
             </div>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 {
                     data.map((item, index) => {
                         return <div key={index} >

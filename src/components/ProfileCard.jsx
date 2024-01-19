@@ -8,7 +8,7 @@ const ProfileCard = ({ data }) => {
         setIsChecked(e)
     }
     return (
-        <div className="grid grid-cols-6 gap-4 p-4 rounded-md bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-6 gap-4 p-4 rounded-md bg-white">
             <div>
                 <img src={data.image} alt={data.name} className="max-w-full mb-2 rounded-md h-44 w-full object-cover" />
                 <Button type="primary" shape="round" size='large' className="bg-[#0E335F] hover:!bg-blue-900 w-full text-white">Profile</Button>
@@ -20,7 +20,7 @@ const ProfileCard = ({ data }) => {
                 <p>{data.number}</p>
                 <p>{data.email}</p>
             </div>
-            <div className='rounded-md overflow-hidden'>
+            <div className='rounded-md'>
                 <gmp-map center={`${data.latitude},${data.longitude}`} zoom="4" map-id="DEMO_MAP_ID">
                     <gmp-advanced-marker
                         position={`${data.latitude},${data.longitude}`}

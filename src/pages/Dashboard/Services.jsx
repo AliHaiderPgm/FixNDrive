@@ -119,7 +119,7 @@ const Services = () => {
     return (
         <div>
             <Header title="Services" />
-            <div className="flex justify-between py-4">
+            <div className="flex flex-col sm:flex-row justify-between py-4">
                 <div className="flex flex-col gap-2">
                     <p className="font-semibold text-xl">Sales Period</p>
                     <p className="p-4 bg-white rounded-md border-1 shadow-sm">08/12/2023 - 08/24/2023</p>
@@ -131,7 +131,7 @@ const Services = () => {
                     </Dropdown>
                 </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2">
                 <div className="col-span-2">
                     <TopSalesChart title="Top Sales by Categories" data={TopChartItems} />
                 </div>
@@ -143,7 +143,7 @@ const Services = () => {
                     })
                 }
             </div>
-            <div className="grid grid-cols-2 gap-4 my-2">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 my-2">
                 <div>
                     <ServiceSection title="Electronics" icon={<MobileOutlined />} iconColor="#035ECF" data={testData} />
                 </div>

@@ -13,9 +13,9 @@ const Banners = () => {
     return (
         <>
             <Header title="Banners & Offers" />
-            <div className="grid grid-cols-4 gap-2 mt-2">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mt-2">
                 <div className="col-span-3">
-                    <div className="grid grid-cols-9 gap-2 mb-2">
+                    <div className="grid md:grid-col-6 lg:grid-cols-9 gap-2 mb-2">
                         <div className="col-span-4">
                             <Sample_1 />
                         </div>
@@ -26,7 +26,7 @@ const Banners = () => {
                             <Sample_3 />
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
                         <div>
                             <Sample_5 />
                         </div>
@@ -42,8 +42,8 @@ const Banners = () => {
                     <Sample_4 />
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-6 my-2">
-                <div className="col-span-3 grid grid-cols-2 gap-2">
+            <div className="grid md:grid-cols-4 gap-6 my-2">
+                <div className="col-span-3 grid  md:grid-cols-2 gap-2">
                     <div>
                         <Sample_8 />
                     </div>

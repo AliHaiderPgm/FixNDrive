@@ -14,16 +14,16 @@ const Settings = () => {
         "address": "123 Main St"
     }
     return (
-        <div>
+        <div className="overflow-scroll sm:overflow-auto">
             <Header title="Settings" />
-            <div className="grid grid-cols-4 gap-2 my-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 my-2">
                 <div className="flex flex-col gap-2">
                     <div className="bg-white rounded-md shadow-lg flex flex-col items-center gap-2 p-4">
-                        <Badge dot offset={[0, 90]} color="#00BA9D">
+                        <Badge dot offset={[0, "90%"]} color="#00BA9D">
                             <Avatar icon={<UserOutlined />} size={{
-                                xs: 24,
-                                sm: 32,
-                                md: 40,
+                                xs: 64,
+                                sm: 64,
+                                md: 64,
                                 lg: 64,
                                 xl: 80,
                                 xxl: 100,
@@ -46,31 +46,31 @@ const Settings = () => {
                         <p>Profile Information file</p>
                     </div>
                 </div>
-                <div className="col-span-3 bg-white rounded-md shadow-lg p-4">
+                <div className="col-span-2 lg:col-span-3 bg-white rounded-md shadow-lg p-4">
                     <h1 className="text-2xl font-bold">My Profile Details</h1>
-                    <div className="flex">
+                    <div className="flex flex-col md:flex-row">
                         <div className="w-full">
                             <div className="p-4">
                                 <p className="text-xs text-gray-500">First Name</p>
-                                <p className="text-xl indent-6">{user.firstName}</p>
+                                <p className="text-xl text-balance break-words indent:1 md:indent-6">{user.firstName}</p>
                             </div>
                             <div className="p-4">
                                 <p className="text-xs text-gray-500">Last Name</p>
-                                <p className="text-xl indent-6">{user.lastName}</p>
+                                <p className="text-xl text-balance break-words indent:1 md:indent-6">{user.lastName}</p>
                             </div>
                             <div className="p-4">
                                 <p className="text-xs text-gray-500">Email</p>
-                                <p className="text-xl indent-6">{user.email}</p>
+                                <p className="text-xl text-balance break-words indent:1 md:indent-6">{user.email}</p>
                             </div>
                             <div className="p-4">
                                 <p className="text-xs text-gray-500">Phone Number</p>
-                                <p className="text-xl indent-6">{user.phoneNumber}</p>
+                                <p className="text-xl text-balance break-words indent:1 md:indent-6">{user.phoneNumber}</p>
                             </div>
                             <div className="p-4">
                                 <p className="text-xs text-gray-500">Password</p>
                                 <Input.Password value={user.phoneNumber} size="large" />
                             </div>
-                            <Button shape="round" className="flex justify-center items-center w-1/2 p-6 bg-green-500 hover:bg-green-500/55 text-white hover:!text-white">Update Information</Button>
+                            <Button shape="round" className="flex justify-center items-center md:w-1/2 p-6 bg-green-500 hover:bg-green-500/55 text-white hover:!text-white">Update Information</Button>
                         </div>
                         <div className="w-full">
                             <div className="p-4">
@@ -97,7 +97,7 @@ const Settings = () => {
                     </div>
                     <div className="p-4 mt-6">
                         <h2 className="text-2xl font-bold">Admin Panel Tools</h2>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid md:grid-cols-3 gap-4">
                             <div>
                                 <p className="text-bold">Connected Apps <span className="text-blue-500">(12)</span></p>
                             </div>

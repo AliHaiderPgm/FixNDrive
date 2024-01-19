@@ -42,7 +42,7 @@ const Home = () => {
             title: 'Role',
             dataIndex: 'role',
             render: (current, data, index) => {
-                return <p className="bg-blue-500 w-1/3 p-2 text-white rounded text-center">{current}</p>
+                return <p className="bg-blue-500 w-full lg:w-1/2 p-2 text-white rounded text-center">{current}</p>
             }
         },
         {
@@ -84,7 +84,7 @@ const Home = () => {
     return (
         <>
             <div className="flex flex-col gap-6">
-                <header className="flex justify-between gap-6">
+                <header className="flex flex-col sm:flex-row justify-between gap-6">
                     <div className="flex justify-between w-full">
                         <div>
                             <h3 className="text-2xl font-semibold">Hello, Khan</h3>
@@ -92,7 +92,7 @@ const Home = () => {
                         </div>
                         <BellFilled className="text-2xl cursor-pointer" />
                     </div>
-                    <div className="vl"></div>
+                    <div className="vl hidden sm:block"></div>
                     <Dropdown menu={{ items, selectable: true, style: { width: 200 } }} className="cursor-pointer">
                         <div className="flex gap-4 items-center">
                             <Avatar icon={<UserOutlined />} />
@@ -106,8 +106,8 @@ const Home = () => {
                 </header>
                 <div>
                     <h1 className="text-2xl text-blue-500 font-bold mb-3">Users Dashboard</h1>
-                    <div className="flex gap-4 items-center">
-                        <Input size="large" className="p-2 rounded-2xl" placeholder="Search" prefix={<UserOutlined className="mr-1" />} />
+                    <div className="flex gap-4 items-center flex-wrap justify-center">
+                        <Input size="large" className="p-2 rounded-2xl md:max-w-[50%]" placeholder="Search" prefix={<UserOutlined className="mr-1" />} />
                         <Button type="primary" className="bg-blue-500" size="large" onClick={handleUser}>
                             Add user <PlusOutlined className="align-middle" />
                         </Button>
@@ -127,7 +127,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div>
-                    <Table columns={columns} dataSource={data} scroll={{ y: 500 }} loading={false} pagination={{ position: ['bottomCenter'] }} />
+                    <Table columns={columns} dataSource={data} scroll={{ x: 600, y: 500 }} loading={false} pagination={{ position: ['bottomCenter'] }} />
                 </div>
             </div>
             <Modal

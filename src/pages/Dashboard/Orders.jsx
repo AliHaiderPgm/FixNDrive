@@ -1,6 +1,5 @@
 import { Dropdown, Table } from "antd"
 import Header from "../../components/Header"
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 const Orders = () => {
     const items = [
         {
@@ -80,9 +79,9 @@ const Orders = () => {
             orderStatus: "Waiting",
             country: "Pakistan",
             currency: "PKR",
-            fee: 20,
-            tax: 0.2,
-            totalAmount: 200,
+            fee: '20',
+            tax: '0.2',
+            totalAmount: '200',
         });
     }
     const columns = [
@@ -92,10 +91,11 @@ const Orders = () => {
         },
         {
             title: 'Store Profile',
+            width: '10%',
             render: (current, data, index) => {
                 return <div className="flex gap-2 items-center">
                     <img src={current.imgUrl} alt="" className="rounded" />
-                    <p className="text-sm">{current.name}</p>
+                    <p className="text-sm text-center">{current.name}</p>
                 </div>
             }
         },
@@ -106,6 +106,7 @@ const Orders = () => {
         {
             title: 'Method',
             dataIndex: 'method',
+            width: '11%',
         },
         {
             title: 'Type',
@@ -114,6 +115,7 @@ const Orders = () => {
         {
             title: 'Status',
             key: 'orderStatus',
+            width: '10%',
             render: (current, data, index) => <p className="bg-blue-500 p-2 rounded-md text-center text-white">{current.orderStatus}</p>,
         },
         {
@@ -131,7 +133,7 @@ const Orders = () => {
         {
             title: 'Tax',
             dataIndex: 'tax',
-            render: (current, data, index) => <p>{current.tax}%</p>,
+            render: (current, data, index) => <p>{current}%</p>,
         },
         {
             title: 'Total',
@@ -142,7 +144,7 @@ const Orders = () => {
     return (
         <div>
             <Header title="Orders" />
-            <div className="flex justify-between py-4">
+            <div className="flex flex-col sm:flex-row justify-between py-4 overflow-hidden">
                 <div className="flex flex-col gap-2">
                     <p className="font-semibold text-xl">Order request date from</p>
                     <p className="p-4 bg-white rounded-md border-1 shadow-sm">08/12/2023 - 08/24/2023</p>
@@ -155,7 +157,7 @@ const Orders = () => {
                 </div>
             </div>
             <div>
-                <Table columns={columns} dataSource={data} scroll={{ y: 500 }} loading={false} pagination={{ position: ['bottomCenter'] }} />
+                <Table columns={columns} dataSource={data} scroll={{ x: 1000, y: 500 }} loading={false} pagination={{ position: ['bottomCenter'] }} />
             </div>
         </div>
     )

@@ -11,7 +11,7 @@ const Sample_4 = () => {
             <div className="p-4 flex flex-col gap-4 items-center text-center">
                 <h1 className="text-4xl font-bold">Worldwide Transactions</h1>
                 <p>100% Open Source - No sign up required</p>
-                <Button className="bg-[#00BA9D] text-white w-2/3" size="large" shape="round">Try For Free</Button>
+                <Button className="bg-[#00BA9D] text-white lg:w-2/3" size="large" shape="round">Try For Free</Button>
             </div>
         </div>
     )
